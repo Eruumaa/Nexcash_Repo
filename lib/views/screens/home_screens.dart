@@ -49,7 +49,7 @@ class HomeScreens extends StatelessWidget {
                 width: double.infinity,
                 height: 40,
                 decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 255, 255, 255)
+                  //color: const Color.fromARGB(255, 255, 255, 255)
                 ),
                 child:
                 Padding(padding: EdgeInsets.symmetric(vertical: 5,horizontal: 5),child: Text("Quiz of The day",style: TextStyle(color: Color.fromARGB(255, 25, 24, 59),fontWeight: FontWeight.bold,fontSize: 18,fontFamily: "Noto Sans Symbols")),)                
@@ -57,19 +57,17 @@ class HomeScreens extends StatelessWidget {
               ),
               Expanded(child: Container(
                 width: double.infinity,
-                color: const Color.fromARGB(255, 255, 255, 255),
+                //color: const Color.fromARGB(255, 255, 255, 255),
                 child: 
                 Padding(
                   padding: EdgeInsets.all(10),
                   child:
                   ListView(
                     children: [
-                      KatruQuiz(),
-                      Container(height: 100, color: Colors.green),
-                      Container(height: 100, color: Colors.blue),
-                      Container(height: 100, color: Colors.red),
-                      Container(height: 100, color: Colors.green),
-                      Container(height: 100, color: Colors.blue),
+                      KatruQuiz(bagian: "Part 1", judul: "Dasar Literasi Keuangan", keterangan: "Complate"),
+                      KatruQuiz(bagian: "Part 2", judul: "Dasar Literasi Keuangan", keterangan: "Play now"),
+                      KatruQuiz(bagian: "Part 3", judul: "Dasar Literasi Keuangan", keterangan: "Locked"),
+                      KatruQuiz(bagian: "Part 4", judul: "Dasar Literasi Keuangan", keterangan: "Locked"),
                     ]
                   )
                 )
