@@ -8,29 +8,28 @@ class HomeScreens extends StatelessWidget {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        items:  const <BottomNavigationBarItem>[
+        items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: ImageIcon(AssetImage("assets/home.png")),
-            label: "home"
+            icon: Image.asset("assets/home.png", height: 24, width: 24),
+            label: "home",
           ),
           BottomNavigationBarItem(
-            icon: ImageIcon(AssetImage("assets/game.png")),
-            label: "home"
-          ), 
+            icon: Image.asset("assets/game.png", height: 24, width: 24),
+            label: "Game",
+          ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: "home"
-          ), 
+            icon: Image.asset("assets/leader.png", height: 24, width: 24),
+            label: "home",
+          ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: "home"
-          ), 
+            icon: Image.asset("assets/people.png", height: 24, width: 24),
+            label: "home",
+          ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: "home"
-          ), 
-          
-        ]
+            icon: Image.asset("assets/settings.png", height: 24, width: 24),
+            label: "home",
+          ),
+        ],
       ),
     );
   }
