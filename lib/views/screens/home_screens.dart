@@ -65,11 +65,10 @@ class HomeScreens extends StatelessWidget {
                   ListView(
                     children: [
                       KatruQuiz(),
-                      Container(height: 100, color: Colors.green),
-                      Container(height: 100, color: Colors.blue),
-                      Container(height: 100, color: Colors.red),
-                      Container(height: 100, color: Colors.green),
-                      Container(height: 100, color: Colors.blue),
+                      KatruQuiz(),
+                      KatruQuiz(),
+                      KatruQuiz(),
+                      KatruQuiz(),
                     ]
                   )
                 )
