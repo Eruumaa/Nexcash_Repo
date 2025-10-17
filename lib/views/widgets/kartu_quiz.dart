@@ -12,7 +12,20 @@ class KatruQuiz extends StatelessWidget {
         border: Border.all(color: Colors.black),
         borderRadius: BorderRadius.circular(10)
       ),
-      child: Text("Test"),
+      child:Row(
+        children: [
+          Padding(
+            padding: EdgeInsets.all(10),child:
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("Part 1"),
+                  Text('Dasar Literasi keuangan')
+                ],
+              )
+          )
+        ],
+      ),
     );
   }
 }
