@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 
 class ButtonHome extends StatelessWidget {
-  const ButtonHome({super.key});
+  final String keterangan;
+  const ButtonHome(
+    {
+      super.key,
+      required this.keterangan
+    }
+  );
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -9,9 +15,11 @@ class ButtonHome extends StatelessWidget {
       height: 20,
       decoration: BoxDecoration(
         color: Colors.blue,
-        borderRadius: BorderRadius.circular(5)
+        borderRadius: BorderRadius.circular(5),
       ),
-      child: Center(child: Text("Complate",style: TextStyle(color: Colors.white),),),
+      child: Center(
+        child: Text(keterangan, style: TextStyle(color: Colors.white)),
+      ),
     );
   }
 }

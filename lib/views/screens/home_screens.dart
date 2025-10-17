@@ -64,11 +64,10 @@ class HomeScreens extends StatelessWidget {
                   child:
                   ListView(
                     children: [
-                      KatruQuiz(),
-                      KatruQuiz(),
-                      KatruQuiz(),
-                      KatruQuiz(),
-                      KatruQuiz(),
+                      KatruQuiz(bagian: "Part 1", judul: "Dasar Literasi Keuangan", keterangan: "Complate"),
+                      KatruQuiz(bagian: "Part 1", judul: "Dasar Literasi Keuangan", keterangan: "Complate"),
+                      KatruQuiz(bagian: "Part 1", judul: "Dasar Literasi Keuangan", keterangan: "Complate"),
+                      KatruQuiz(bagian: "Part 1", judul: "Dasar Literasi Keuangan", keterangan: "Complate"),
                     ]
                   )
                 )

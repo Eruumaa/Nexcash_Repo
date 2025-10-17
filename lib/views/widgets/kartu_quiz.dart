@@ -2,11 +2,19 @@ import 'package:flutter/material.dart';
 import '../widgets/button_home.dart';
 
 class KatruQuiz extends StatelessWidget {
-  const KatruQuiz({super.key});
+  final String bagian;
+  final String judul;
+  final String keterangan;
+  const KatruQuiz({
+    super.key,
+    required this.bagian,
+    required this.judul,
+    required this.keterangan
+    });
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(5),
+      padding: EdgeInsets.all(10),
       child: Container(
         width: double.infinity,
         decoration: BoxDecoration(
@@ -23,14 +31,14 @@ class KatruQuiz extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Part 1",
+                      bagian,
                       style: TextStyle(
                         color: const Color.fromARGB(255, 25, 24, 59),
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     Text(
-                      'Dasar Literasi keuangan',
+                      judul,
                       style: TextStyle(
                         color: const Color.fromARGB(255, 25, 24, 59),
                         fontWeight: FontWeight.bold,
@@ -38,9 +46,9 @@ class KatruQuiz extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 10),
-                    Text("Dasar Literasi keuangan"),
+                    Text(judul),
                     SizedBox(height: 5),
-                    ButtonHome(),
+                    ButtonHome(keterangan: keterangan,),
                   ],
                 ),
               ),
