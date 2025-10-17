@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/katru_daily.dart';
 
 class HomeScreens extends StatelessWidget {
   const HomeScreens({super.key});
@@ -13,11 +14,15 @@ class HomeScreens extends StatelessWidget {
           height: double.infinity,
           child: Column(
             children: [
+              SizedBox(
+                width: MediaQuery.of(context).size.width,
+                height: 30,
+              ),
               Container(
                 width: double.infinity,
                 height: 60,
                 decoration: BoxDecoration(
-                  color: Colors.red
+                  
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -31,8 +36,13 @@ class HomeScreens extends StatelessWidget {
                 width: double.infinity,
                 height: 100,
                 decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 25, 24, 59)
+                  color: const Color.fromARGB(255, 25, 24, 59),
+                  borderRadius: BorderRadius.circular(15)
                 ),
+                child: Padding(
+                  padding: EdgeInsets.all(20),
+                  child: KatruDaily()
+                )
               ),
               Container(
                 width: double.infinity,
