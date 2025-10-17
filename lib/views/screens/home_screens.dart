@@ -15,7 +15,7 @@ class HomeScreens extends StatelessWidget {
             children: [
               Container(
                 width: double.infinity,
-                height: 100,
+                height: 60,
                 decoration: BoxDecoration(
                   color: Colors.red
                 ),
@@ -31,7 +31,8 @@ class HomeScreens extends StatelessWidget {
                 width: double.infinity,
                 height: 100,
                 decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 176, 208, 61)
+                  borderRadius: ,
+                  color: const Color.fromARGB(255, 25, 24, 59)
                 ),
               ),
               Container(
