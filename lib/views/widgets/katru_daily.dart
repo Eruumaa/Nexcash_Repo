@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/progressbar.dart';
 
 class KatruDaily extends StatelessWidget {
   const KatruDaily({super.key});
@@ -40,6 +41,8 @@ class KatruDaily extends StatelessWidget {
               fontFamily: "Noto Sans Symbols"
             ),
           ),
+          SizedBox(height: 10,),
+          Progressbar(progress: 0.1)
         ],
       ),
     ),
