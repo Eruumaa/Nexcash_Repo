@@ -7,7 +7,8 @@ class HomeScreens extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: SizedBox(
+        child: Padding(padding: EdgeInsets.all(10),child:
+        SizedBox(
           width: double.infinity,
           height: double.infinity,
           child: Column(
@@ -17,6 +18,13 @@ class HomeScreens extends StatelessWidget {
                 height: 100,
                 decoration: BoxDecoration(
                   color: Colors.red
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("Welcome back, user",style: TextStyle(color: Color.fromARGB(255, 25, 24, 59),fontWeight: FontWeight.bold  )),
+                    Text("Lets learn!",style: TextStyle(color: Color.fromARGB(255, 25, 24, 59),fontSize: 25,fontWeight: FontWeight.bold ))
+                  ],
                 ),
               ),
               Container(
@@ -39,7 +47,7 @@ class HomeScreens extends StatelessWidget {
               ))
             ],
           ),
-
+        ),
         )
       ) ,
       bottomNavigationBar: BottomNavigationBar(
