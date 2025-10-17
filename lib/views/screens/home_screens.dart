@@ -8,6 +8,8 @@ class HomeScreens extends StatelessWidget {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Image.asset("assets/home.png", height: 24, width: 24),
