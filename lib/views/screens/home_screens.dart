@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../widgets/katru_daily.dart';
+import '../widgets/kartu_quiz.dart';
 
 class HomeScreens extends StatelessWidget {
   const HomeScreens({super.key});
@@ -56,8 +57,22 @@ class HomeScreens extends StatelessWidget {
               ),
               Expanded(child: Container(
                 width: double.infinity,
-                color: Colors.blue,
-                child: ,
+                color: const Color.fromARGB(255, 255, 255, 255),
+                child: 
+                Padding(
+                  padding: EdgeInsets.all(10),
+                  child:
+                  ListView(
+                    children: [
+                      KatruQuiz(),
+                      Container(height: 100, color: Colors.green),
+                      Container(height: 100, color: Colors.blue),
+                      Container(height: 100, color: Colors.red),
+                      Container(height: 100, color: Colors.green),
+                      Container(height: 100, color: Colors.blue),
+                    ]
+                  )
+                )
               ))
             ],
           ),
