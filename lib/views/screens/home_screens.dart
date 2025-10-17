@@ -46,14 +46,18 @@ class HomeScreens extends StatelessWidget {
               ),
               Container(
                 width: double.infinity,
-                height: 100,
+                height: 40,
                 decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 83, 222, 92)
+                  color: const Color.fromARGB(255, 255, 255, 255)
                 ),
+                child:
+                Padding(padding: EdgeInsets.symmetric(vertical: 5,horizontal: 5),child: Text("Quiz of The day",style: TextStyle(color: Color.fromARGB(255, 25, 24, 59),fontWeight: FontWeight.bold,fontSize: 18,fontFamily: "Noto Sans Symbols")),)                
+                 
               ),
               Expanded(child: Container(
                 width: double.infinity,
                 color: Colors.blue,
+                child: ,
               ))
             ],
           ),
