@@ -53,7 +53,7 @@ class KatruQuiz extends StatelessWidget {
                 ),
               ),
             ),
-            Flexible(child: Image.asset("assets/money.png")),
+            Flexible(child: Image.asset("assets/money.png",)),
           ],
         ),
       ),
