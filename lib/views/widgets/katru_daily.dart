@@ -27,8 +27,9 @@ class KatruDaily extends StatelessWidget {
             "Day Streak",
             style: TextStyle(
               color: Colors.white,
-              fontSize: 20,
-              fontWeight: FontWeight.bold
+              fontSize: 15,
+              fontWeight: FontWeight.bold,
+              fontFamily: "Noto Sans Symbols"
             ),
           ),
           Text(
@@ -36,7 +37,7 @@ class KatruDaily extends StatelessWidget {
             style: TextStyle(
               color: Colors.white,
               fontSize: 12,
-              fontWeight: FontWeight.bold
+              fontFamily: "Noto Sans Symbols"
             ),
           ),
         ],

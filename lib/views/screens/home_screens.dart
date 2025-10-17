@@ -20,15 +20,15 @@ class HomeScreens extends StatelessWidget {
               ),
               Container(
                 width: double.infinity,
-                height: 60,
+                height: 70,
                 decoration: BoxDecoration(
                   
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Welcome back, user",style: TextStyle(color: Color.fromARGB(255, 25, 24, 59),fontWeight: FontWeight.bold  )),
-                    Text("Lets learn!",style: TextStyle(color: Color.fromARGB(255, 25, 24, 59),fontSize: 25,fontWeight: FontWeight.bold ))
+                    Text("Welcome back, user",style: TextStyle(color: Color.fromARGB(255, 25, 24, 59),fontWeight: FontWeight.bold,fontFamily: "Noto Sans Symbols"  )),
+                    Text("Lets learn!",style: TextStyle(color: Color.fromARGB(255, 25, 24, 59),fontSize: 30,fontWeight: FontWeight.bold,fontFamily: "Noto Sans Symbols"))
                   ],
                 ),
               ),
