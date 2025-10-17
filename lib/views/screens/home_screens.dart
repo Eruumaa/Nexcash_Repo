@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart'
+import 'package:flutter/material.dart';
 
 class HomeScreens extends StatelessWidget {
   const HomeScreens({super.key});
@@ -8,10 +8,7 @@ class HomeScreens extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
-      decoration: BoxDecoration(
-        color: 
-      ),
+      decoration: BoxDecoration(color: Colors.amber),
     );
   }
-  
 }
