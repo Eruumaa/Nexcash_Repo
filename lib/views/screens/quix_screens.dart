@@ -5,6 +5,14 @@ class QuixScreens extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(title: const Text('Quix App')),
+      body: const Center(
+        child: Text(
+          'Selamat Datang',
+          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+        ),
+      ),
+    );
   }
 }
