@@ -10,11 +10,11 @@ class HomeScreens extends StatelessWidget {
         type: BottomNavigationBarType.fixed,
         items:  const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: ImageIcon(AssetImage("Nexcash_Repo/lib/views/assets/home.png")),
+            icon: ImageIcon(AssetImage("assets/home.png")),
             label: "home"
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: ImageIcon(AssetImage("assets/game.png")),
             label: "home"
           ), 
           BottomNavigationBarItem(
