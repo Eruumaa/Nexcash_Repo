@@ -1,82 +1,123 @@
 import 'package:flutter/material.dart';
 import '../widgets/katru_daily.dart';
-import '../widgets/kartu_quiz.dart';
+import '../widgets/kartu_quiz.dart'; 
+import 'game_screens.dart';
+import 'leaderboard_screens.dart';
 
-class HomeScreens extends StatelessWidget {
+
+class HomeScreens extends StatefulWidget {
   const HomeScreens({super.key});
+
+  @override
+  State<HomeScreens> createState() => _HomeScreensState();
+}
+
+class _HomeScreensState extends State<HomeScreens> {
+  
+  void _onItemTapped(int index) {
+    if (index == 1) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const GameScreens()),
+      );
+    }
+    else if(index == 2){
+        Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const LeaderboardScreens()),
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Padding(padding: EdgeInsets.all(10),child:
-        SizedBox(
-          width: double.infinity,
-          height: double.infinity,
-          child: Column(
-            children: [
-              SizedBox(
-                width: MediaQuery.of(context).size.width,
-                height: 30,
-              ),
-              Container(
-                width: double.infinity,
-                height: 70,
-                decoration: BoxDecoration(
-                  
+        child: Padding(
+          padding: EdgeInsets.all(10),
+          child: SizedBox(
+            width: double.infinity,
+            height: double.infinity,
+            child: Column(
+              children: [
+                SizedBox(
+                  width: MediaQuery.of(context).size.width,
+                  height: 30,
                 ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text("Welcome back, user",style: TextStyle(color: Color.fromARGB(255, 25, 24, 59),fontWeight: FontWeight.bold,fontFamily: "Noto Sans Symbols"  )),
-                    Text("Lets learn!",style: TextStyle(color: Color.fromARGB(255, 25, 24, 59),fontSize: 30,fontWeight: FontWeight.bold,fontFamily: "Noto Sans Symbols"))
-                  ],
-                ),
-              ),
-              Container(
-                width: double.infinity,
-                height: 100,
-                decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 25, 24, 59),
-                  borderRadius: BorderRadius.circular(15)
-                ),
-                child: Padding(
-                  padding: EdgeInsets.all(20),
-                  child: KatruDaily()
-                )
-              ),
-              Container(
-                width: double.infinity,
-                height: 40,
-                decoration: BoxDecoration(
-                  //color: const Color.fromARGB(255, 255, 255, 255)
-                ),
-                child:
-                Padding(padding: EdgeInsets.symmetric(vertical: 5,horizontal: 5),child: Text("Quiz of The day",style: TextStyle(color: Color.fromARGB(255, 25, 24, 59),fontWeight: FontWeight.bold,fontSize: 18,fontFamily: "Noto Sans Symbols")),)                
-                 
-              ),
-              Expanded(child: Container(
-                width: double.infinity,
-                //color: const Color.fromARGB(255, 255, 255, 255),
-                child: 
-                Padding(
-                  padding: EdgeInsets.all(10),
-                  child:
-                  ListView(
+                Container(
+                  width: double.infinity,
+                  height: 70,
+                  decoration: BoxDecoration(),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      KatruQuiz(bagian: "Part 1", judul: "Dasar Literasi Keuangan", keterangan: "Complate"),
-                      KatruQuiz(bagian: "Part 2", judul: "Dasar Literasi Keuangan", keterangan: "Play now"),
-                      KatruQuiz(bagian: "Part 3", judul: "Dasar Literasi Keuangan", keterangan: "Locked"),
-                      KatruQuiz(bagian: "Part 4", judul: "Dasar Literasi Keuangan", keterangan: "Locked"),
-                    ]
-                  )
-                )
-              ))
-            ],
+                      Text("Welcome back, user",
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 25, 24, 59),
+                              fontWeight: FontWeight.bold,
+                              fontFamily: "Noto Sans Symbols")),
+                      Text("Lets learn!",
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 25, 24, 59),
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: "Noto Sans Symbols"))
+                    ],
+                  ),
+                ),
+                Container(
+                    width: double.infinity,
+                    height: 100,
+                    decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 25, 24, 59),
+                        borderRadius: BorderRadius.circular(15)),
+                    child: Padding(
+                        padding: EdgeInsets.all(20), child: KatruDaily())),
+                Container(
+                    width: double.infinity,
+                    height: 40,
+                    decoration: BoxDecoration(
+                        //color: const Color.fromARGB(255, 255, 255, 255)
+                        ),
+                    child: Padding(
+                      padding:
+                          EdgeInsets.symmetric(vertical: 5, horizontal: 5),
+                      child: Text("Quiz of The day",
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 25, 24, 59),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                              fontFamily: "Noto Sans Symbols")),
+                    )),
+                Expanded(
+                    child: SizedBox(
+                        width: double.infinity,
+                        //color: const Color.fromARGB(255, 255, 255, 255),
+                        child: Padding(
+                            padding: EdgeInsets.all(10),
+                            child: ListView(children: [
+                              KatruQuiz(
+                                  bagian: "Part 1",
+                                  judul: "Dasar Literasi Keuangan",
+                                  keterangan: "Complate"),
+                              KatruQuiz(
+                                  bagian: "Part 2",
+                                  judul: "Dasar Literasi Keuangan",
+                                  keterangan: "Play now"),
+                              KatruQuiz(
+                                  bagian: "Part 3",
+                                  judul: "Dasar Literasi Keuangan",
+                                  keterangan: "Locked"),
+                              KatruQuiz(
+                                  bagian: "Part 4",
+                                  judul: "Dasar Literasi Keuangan",
+                                  keterangan: "Locked"),
+                            ]))))
+              ],
+            ),
           ),
         ),
-        )
-      ) ,
+      ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         showSelectedLabels: false,
@@ -103,6 +144,7 @@ class HomeScreens extends StatelessWidget {
             label: "home",
           ),
         ],
+        onTap: _onItemTapped,
       ),
     );
   }
