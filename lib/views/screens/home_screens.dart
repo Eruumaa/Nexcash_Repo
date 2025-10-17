@@ -5,10 +5,33 @@ class HomeScreens extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height,
-      decoration: BoxDecoration(color: Colors.amber),
+    return Scaffold(
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        items:  const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: ImageIcon(AssetImage("Nexcash_Repo/lib/views/assets/home.png")),
+            label: "home"
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: "home"
+          ), 
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: "home"
+          ), 
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: "home"
+          ), 
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: "home"
+          ), 
+          
+        ]
+      ),
     );
   }
 }
