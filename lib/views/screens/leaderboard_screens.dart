@@ -3,6 +3,7 @@ import '../screens/home_screens.dart';
 import '../../models/leaderboard_model.dart'; 
 import '../widgets/kartu_leaderboard.dart'; 
 import 'game_screens.dart'; 
+import 'profile_screens.dart';
 
 class LeaderboardScreens extends StatefulWidget {
   const LeaderboardScreens({super.key});
@@ -31,6 +32,12 @@ class _LeaderboardScreens extends State<LeaderboardScreens> {
         MaterialPageRoute(builder: (context) => const HomeScreens()),
       );
     }
+    else if(index == 3){
+        Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => ProfileScreens()),
+      );
+    }  
 
   }
 
