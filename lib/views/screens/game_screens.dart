@@ -2,12 +2,11 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 
 // --- BAGIAN 1: MODEL DATA ---
-// Menggunakan kelas khusus (Class) jauh lebih baik daripada Map<String, dynamic>
-// Ini memberikan type-safety dan auto-complete di IDE Anda.
+
 
 class Decision {
   final String label;
-  final bool appliesAmount; // Menggantikan 'action' string
+  final bool appliesAmount; 
 
   const Decision({required this.label, required this.appliesAmount});
 }
@@ -33,8 +32,6 @@ class GameEvent {
 }
 
 // --- BAGIAN 2: DATA GAME ---
-// Memisahkan data dari logika UI.
-// Jauh lebih mudah untuk mengedit level di sini.
 
 final List<GameEvent> gameLevels = [
   GameEvent(
