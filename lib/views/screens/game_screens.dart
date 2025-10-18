@@ -3,10 +3,9 @@ import 'dart:math';
 
 // --- BAGIAN 1: MODEL DATA ---
 
-
 class Decision {
   final String label;
-  final bool appliesAmount; 
+  final bool appliesAmount;
 
   const Decision({required this.label, required this.appliesAmount});
 }
@@ -190,7 +189,8 @@ final List<GameEvent> gameLevels = [
   GameEvent(
     id: 13,
     title: 'Bonus Referral',
-    description: 'Ajak teman join dan dapat bonus Rp 50.000 per referral. 3 teman!',
+    description:
+        'Ajak teman join dan dapat bonus Rp 50.000 per referral. 3 teman!',
     type: 'income',
     color: Colors.green,
     amount: 150000,
@@ -214,7 +214,8 @@ final List<GameEvent> gameLevels = [
   GameEvent(
     id: 15,
     title: 'Pinjaman Ibu',
-    description: 'Ibu meminjamkan uang untuk biaya sekolah Rp 250.000 tanpa bunga.',
+    description:
+        'Ibu meminjamkan uang untuk biaya sekolah Rp 250.000 tanpa bunga.',
     type: 'family_loan',
     color: Colors.blue,
     amount: 250000,
@@ -316,7 +317,9 @@ final List<GameEvent> gameLevels = [
     amount: -150000,
     decisions: [
       Decision(label: 'Beli Baru', appliesAmount: true),
-      Decision(label: 'Perbaiki', appliesAmount: false), // Asumsi perbaiki lebih murah/gratis
+      Decision(
+          label: 'Perbaiki',
+          appliesAmount: false), // Asumsi perbaiki lebih murah/gratis
     ],
   ),
   GameEvent(
@@ -454,7 +457,11 @@ class _MonopolyBoardState extends State<MonopolyBoard> {
   void _showChatbotPopup() {
     showDialog(
       context: context,
+<<<<<<< HEAD
+      barrierColor: Colors.black.withAlpha(77), // <-- DIPERBAIKI
+=======
       barrierColor: Colors.black,
+>>>>>>> 05642a2a13b4e23c4d180b9a11405ff9c51d551b
       builder: (BuildContext context) {
         return const ChatbotDialog(); // Gunakan widget terpisah
       },
@@ -489,7 +496,11 @@ class _MonopolyBoardState extends State<MonopolyBoard> {
                 child: Container(
                   padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
+<<<<<<< HEAD
+                    color: Colors.black.withAlpha(77), // <-- DIPERBAIKI
+=======
                     color: Colors.black,
+>>>>>>> 05642a2a13b4e23c4d180b9a11405ff9c51d551b
                     shape: BoxShape.circle,
                   ),
                   child: Image.asset(
@@ -590,7 +601,11 @@ class LevelTile extends StatelessWidget {
             child: Container(
               width: 4,
               height: 15,
+<<<<<<< HEAD
+              color: Colors.white.withAlpha(102), // <-- DIPERBAIKI (0.4 * 255)
+=======
               color: Colors.white,
+>>>>>>> 05642a2a13b4e23c4d180b9a11405ff9c51d551b
             ),
           ),
         Container(
@@ -598,7 +613,13 @@ class LevelTile extends StatelessWidget {
           margin: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 40.0),
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
           decoration: BoxDecoration(
+<<<<<<< HEAD
+            color: event.color.withAlpha(isCurrent
+                ? 255
+                : 204), // <-- DIPERBAIKI (1.0 * 255) & (0.8 * 255)
+=======
             color: Colors.white,
+>>>>>>> 05642a2a13b4e23c4d180b9a11405ff9c51d551b
             borderRadius: BorderRadius.circular(12),
             border: Border.all(
               color: isCurrent ? Colors.white : Colors.black54,
@@ -640,7 +661,11 @@ class LevelTile extends StatelessWidget {
                     event.description,
                     style: TextStyle(
                       fontSize: 11,
+<<<<<<< HEAD
+                      color: Colors.black.withAlpha(179), // <-- DIPERBAIKI (0.7 * 255)
+=======
                       color: Colors.black,
+>>>>>>> 05642a2a13b4e23c4d180b9a11405ff9c51d551b
                     ),
                     textAlign: TextAlign.center,
                     maxLines: 1,
@@ -711,7 +736,11 @@ class EventDialog extends StatelessWidget {
           maxHeight: MediaQuery.of(context).size.height * 0.8,
         ),
         decoration: BoxDecoration(
+<<<<<<< HEAD
+          color: const Color(0xFF82D5FA).withAlpha(242), // <-- DIPERBAIKI (0.95 * 255)
+=======
           color: const Color(0xFF82D5FA),
+>>>>>>> 05642a2a13b4e23c4d180b9a11405ff9c51d551b
           borderRadius: BorderRadius.circular(24),
           border: Border.all(
             color: Colors.lightBlue.shade700,
@@ -719,7 +748,7 @@ class EventDialog extends StatelessWidget {
           ),
           boxShadow: const [
             BoxShadow(
-              color: Colors.black38,
+              color: Colors.black38, // <-- Ini sudah benar, tidak perlu diubah
               spreadRadius: 3,
               blurRadius: 10,
             )
@@ -795,7 +824,12 @@ class EventDialog extends StatelessWidget {
                     Container(
                       padding: const EdgeInsets.all(12),
                       decoration: BoxDecoration(
+<<<<<<< HEAD
+                        color: Colors.white
+                            .withAlpha(230), // <-- DIPERBAIKI (0.9 * 255)
+=======
                         color: Colors.white,
+>>>>>>> 05642a2a13b4e23c4d180b9a11405ff9c51d551b
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Text(
@@ -813,7 +847,12 @@ class EventDialog extends StatelessWidget {
                       Container(
                         padding: const EdgeInsets.all(12),
                         decoration: BoxDecoration(
+<<<<<<< HEAD
+                          color: Colors.white
+                              .withAlpha(217), // <-- DIPERBAIKI (0.85 * 255)
+=======
                           color: Colors.white,
+>>>>>>> 05642a2a13b4e23c4d180b9a11405ff9c51d551b
                           borderRadius: BorderRadius.circular(12),
                           border: Border.all(
                             color: _getAmountColor(),
@@ -898,7 +937,11 @@ class GameOverDialog extends StatelessWidget {
         width: 300,
         padding: const EdgeInsets.all(24),
         decoration: BoxDecoration(
+<<<<<<< HEAD
+          color: Colors.red.shade400.withAlpha(230), // <-- DIPERBAIKI (0.9 * 255)
+=======
           color: Colors.red.shade400,
+>>>>>>> 05642a2a13b4e23c4d180b9a11405ff9c51d551b
           borderRadius: BorderRadius.circular(20),
           border: Border.all(color: Colors.red.shade700, width: 3),
         ),
@@ -1122,7 +1165,11 @@ class _ChatbotDialogState extends State<ChatbotDialog> {
         width: 300,
         height: 450,
         decoration: BoxDecoration(
+<<<<<<< HEAD
+          color: const Color(0xFF82D5FA).withAlpha(230), // <-- DIPERBAIKI (0.9 * 255)
+=======
           color: const Color(0xFF82D5FA),
+>>>>>>> 05642a2a13b4e23c4d180b9a11405ff9c51d551b
           borderRadius: BorderRadius.circular(20),
           border: Border.all(
             color: Colors.lightBlue.shade700,
@@ -1130,7 +1177,7 @@ class _ChatbotDialogState extends State<ChatbotDialog> {
           ),
           boxShadow: const [
             BoxShadow(
-              color: Colors.black26,
+              color: Colors.black26, // <-- Ini sudah benar
               spreadRadius: 2,
               blurRadius: 8,
             )
@@ -1143,7 +1190,12 @@ class _ChatbotDialogState extends State<ChatbotDialog> {
               padding:
                   const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
               decoration: BoxDecoration(
+<<<<<<< HEAD
+                color: Colors.lightBlue.shade400
+                    .withAlpha(179), // <-- DIPERBAIKI (0.7 * 255)
+=======
                 color: Colors.lightBlue.shade400,
+>>>>>>> 05642a2a13b4e23c4d180b9a11405ff9c51d551b
                 borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(18),
                   topRight: Radius.circular(18),
@@ -1201,7 +1253,11 @@ class _ChatbotDialogState extends State<ChatbotDialog> {
                         ),
                         decoration: BoxDecoration(
                           color: isBot
+<<<<<<< HEAD
+                              ? Colors.white.withAlpha(230) // <-- DIPERBAIKI (0.9 * 255)
+=======
                               ? Colors.white
+>>>>>>> 05642a2a13b4e23c4d180b9a11405ff9c51d551b
                               : Colors.lightBlue.shade600,
                           borderRadius: BorderRadius.circular(12),
                         ),
@@ -1233,7 +1289,12 @@ class _ChatbotDialogState extends State<ChatbotDialog> {
                           fontSize: 12,
                         ),
                         filled: true,
+<<<<<<< HEAD
+                        fillColor: Colors.white
+                            .withAlpha(204), // <-- DIPERBAIKI (0.8 * 255)
+=======
                         fillColor: Colors.white,
+>>>>>>> 05642a2a13b4e23c4d180b9a11405ff9c51d551b
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
                           borderSide: BorderSide.none,
