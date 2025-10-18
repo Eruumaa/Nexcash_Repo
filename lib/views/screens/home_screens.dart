@@ -24,7 +24,7 @@ class _HomeScreensState extends State<HomeScreens> {
     else if(index == 2){
         Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => const LeaderboardScreens()),
+        MaterialPageRoute(builder: (context) => LeaderboardScreens()),
       );
     }
   }
