@@ -454,7 +454,7 @@ class _MonopolyBoardState extends State<MonopolyBoard> {
   void _showChatbotPopup() {
     showDialog(
       context: context,
-      barrierColor: Colors.black.withOpacity(0.3),
+      barrierColor: Colors.black,
       builder: (BuildContext context) {
         return const ChatbotDialog(); // Gunakan widget terpisah
       },
@@ -489,7 +489,7 @@ class _MonopolyBoardState extends State<MonopolyBoard> {
                 child: Container(
                   padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
-                    color: Colors.black.withOpacity(0.3),
+                    color: Colors.black,
                     shape: BoxShape.circle,
                   ),
                   child: Image.asset(
@@ -590,7 +590,7 @@ class LevelTile extends StatelessWidget {
             child: Container(
               width: 4,
               height: 15,
-              color: Colors.white.withOpacity(0.4),
+              color: Colors.white,
             ),
           ),
         Container(
@@ -598,7 +598,7 @@ class LevelTile extends StatelessWidget {
           margin: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 40.0),
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
           decoration: BoxDecoration(
-            color: event.color.withOpacity(isCurrent ? 1.0 : 0.8),
+            color: Colors.white,
             borderRadius: BorderRadius.circular(12),
             border: Border.all(
               color: isCurrent ? Colors.white : Colors.black54,
@@ -640,7 +640,7 @@ class LevelTile extends StatelessWidget {
                     event.description,
                     style: TextStyle(
                       fontSize: 11,
-                      color: Colors.black.withOpacity(0.7),
+                      color: Colors.black,
                     ),
                     textAlign: TextAlign.center,
                     maxLines: 1,
@@ -711,7 +711,7 @@ class EventDialog extends StatelessWidget {
           maxHeight: MediaQuery.of(context).size.height * 0.8,
         ),
         decoration: BoxDecoration(
-          color: const Color(0xFF82D5FA).withOpacity(0.95),
+          color: const Color(0xFF82D5FA),
           borderRadius: BorderRadius.circular(24),
           border: Border.all(
             color: Colors.lightBlue.shade700,
@@ -786,7 +786,7 @@ class EventDialog extends StatelessWidget {
                 ],
               ),
             ),
-            // Konten Dialog (Scrollable)
+           
             Flexible(
               child: SingleChildScrollView(
                 padding: const EdgeInsets.all(16),
@@ -795,7 +795,7 @@ class EventDialog extends StatelessWidget {
                     Container(
                       padding: const EdgeInsets.all(12),
                       decoration: BoxDecoration(
-                        color: Colors.white.withOpacity(0.9),
+                        color: Colors.white,
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Text(
@@ -813,7 +813,7 @@ class EventDialog extends StatelessWidget {
                       Container(
                         padding: const EdgeInsets.all(12),
                         decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(0.85),
+                          color: Colors.white,
                           borderRadius: BorderRadius.circular(12),
                           border: Border.all(
                             color: _getAmountColor(),
@@ -898,7 +898,7 @@ class GameOverDialog extends StatelessWidget {
         width: 300,
         padding: const EdgeInsets.all(24),
         decoration: BoxDecoration(
-          color: Colors.red.shade400.withOpacity(0.9),
+          color: Colors.red.shade400,
           borderRadius: BorderRadius.circular(20),
           border: Border.all(color: Colors.red.shade700, width: 3),
         ),
@@ -1122,7 +1122,7 @@ class _ChatbotDialogState extends State<ChatbotDialog> {
         width: 300,
         height: 450,
         decoration: BoxDecoration(
-          color: const Color(0xFF82D5FA).withOpacity(0.9),
+          color: const Color(0xFF82D5FA),
           borderRadius: BorderRadius.circular(20),
           border: Border.all(
             color: Colors.lightBlue.shade700,
@@ -1143,7 +1143,7 @@ class _ChatbotDialogState extends State<ChatbotDialog> {
               padding:
                   const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
               decoration: BoxDecoration(
-                color: Colors.lightBlue.shade400.withOpacity(0.7),
+                color: Colors.lightBlue.shade400,
                 borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(18),
                   topRight: Radius.circular(18),
@@ -1201,7 +1201,7 @@ class _ChatbotDialogState extends State<ChatbotDialog> {
                         ),
                         decoration: BoxDecoration(
                           color: isBot
-                              ? Colors.white.withOpacity(0.9)
+                              ? Colors.white
                               : Colors.lightBlue.shade600,
                           borderRadius: BorderRadius.circular(12),
                         ),
@@ -1233,7 +1233,7 @@ class _ChatbotDialogState extends State<ChatbotDialog> {
                           fontSize: 12,
                         ),
                         filled: true,
-                        fillColor: Colors.white.withOpacity(0.8),
+                        fillColor: Colors.white,
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
                           borderSide: BorderSide.none,
