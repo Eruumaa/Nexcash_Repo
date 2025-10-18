@@ -374,7 +374,7 @@ class MonopolyBoard extends StatefulWidget {
 class _MonopolyBoardState extends State<MonopolyBoard> {
   // State inti dari game
   int currentPosition = 0;
-  int balance = 1000000;
+  int balance = 100000;
   int diceResult = 0;
   bool isRolling = false;
   GameEvent? currentEventData;
@@ -432,7 +432,7 @@ class _MonopolyBoardState extends State<MonopolyBoard> {
   void resetGame() {
     setState(() {
       currentPosition = 0;
-      balance = 1000000;
+      balance = 100000;
       diceResult = 0;
       showEventDialog = false;
       currentEventData = null;

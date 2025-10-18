@@ -66,7 +66,7 @@ class PodiumWidget extends StatelessWidget {
         ),
         const SizedBox(height: 5),
         Container(
-          width: 103,
+          width: 90,
           height: height,
           decoration: BoxDecoration(
             color: bgColor,
