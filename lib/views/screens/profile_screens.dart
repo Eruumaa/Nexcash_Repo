@@ -201,34 +201,29 @@ class _ProfileScreens extends State<ProfileScreens> {
         type: BottomNavigationBarType.fixed,
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
-        selectedItemColor:
-            Colors.blueAccent, 
-        unselectedItemColor:
-            Colors.grey[400],
-        items: const <BottomNavigationBarItem>[
+        items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home, size: 30),
-            label: "Home",
+            icon: Image.asset("assets/home.png", height: 35, width: 35),
+            label: "home",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.games, size: 30),
+            icon: Image.asset("assets/game.png", height: 35, width: 35),
             label: "Game",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.emoji_events, size: 30),
-            label: "Leader",
+            icon: Image.asset("assets/leader.png", height: 35, width: 35),
+            label: "home",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person, size: 30),
-            label: "Profile",
+            icon: Image.asset("assets/people.png", height: 25, width: 25),
+            label: "home",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.more_horiz, size: 30), // Settings/More
-            label: "More",
+            icon: Image.asset("assets/settings.png", height: 30, width: 30),
+            label: "home",
           ),
         ],
+        onTap: _onItemTapped,
       ),
     );
   }
