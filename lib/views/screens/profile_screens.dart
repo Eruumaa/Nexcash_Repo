@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nexcash_mvp/views/screens/home_screens.dart';
 import 'game_screens.dart';
 import 'leaderboard_screens.dart';
-// Saya hapus import 'kartu_profile.dart' karena saya buatkan widget-nya di bawah
-// import '../widgets/kartu_profile.dart'; 
+
 
 class ProfileScreens extends StatefulWidget {
   const ProfileScreens({super.key});
@@ -13,7 +12,7 @@ class ProfileScreens extends StatefulWidget {
 }
 
 class _ProfileScreens extends State<ProfileScreens> {
-  int _selectedIndex = 3; // Atur indeks ke-3 (Profile) agar aktif
+  int _selectedIndex = 3; 
 
   void _onItemTapped(int index) {
     setState(() {
@@ -36,13 +35,13 @@ class _ProfileScreens extends State<ProfileScreens> {
         MaterialPageRoute(builder: (context) => HomeScreens()),
       );
     } else if (index == 4) {
-      // Ini bisa diarahkan ke layar settings, untuk saat ini ke Home
+
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => HomeScreens()),
       );
     }
-    // Tidak ada 'else if (index == 3)' karena kita sudah di halaman Profile
+
   }
 
   @override
