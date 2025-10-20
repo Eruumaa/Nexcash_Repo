@@ -130,7 +130,7 @@ NexCash dirancang sebagai **personal finance AI platform** yang dapat dikomersia
 | :----------------------------------------- | :---------------------------- | :---------------------------------------------------- |
 | [Azmi Basri](https://github.com/Azmibasri) | Lead Developer                | Pengembang utama dan arsitek sistem                   |
 | [Muhammad Aqil Mubarak](https://github.com/Eruumaa) | Research & System Integration | Pengembangan integrasi API, dokumentasi, dan UI logic |
-| [Muhammad Fathir](https://github.com/Eruumaa) | System Developer & Bussiness Planner | Pengembangan sistem, kuis, dan rencana bisnis |
+| [Muhammad Fathir](https://github.com/fathrmhd) | System Developer & Bussiness Planner | Pengembangan sistem, kuis, dan rencana bisnis |
 
 ---
 
