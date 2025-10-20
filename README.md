@@ -1,5 +1,3 @@
----
-
 # 🌐 NexCash
 
 **NexCash** adalah proyek berbasis **AI-powered financial assistant** yang mengintegrasikan **Flutter**, **Flask API**, dan **DeepSeek API** untuk membantu pengguna mengelola keuangan pribadi secara cerdas dan real-time.
